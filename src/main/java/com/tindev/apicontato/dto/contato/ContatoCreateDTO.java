@@ -1,4 +1,4 @@
-package com.tindev.apicontato.dto;
+package com.tindev.apicontato.dto.contato;
 
 import com.tindev.apicontato.enums.Tipo;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,8 @@
 package com.tindev.apicontato.controller;
 
-import com.tindev.apicontato.dto.ContatoCreateDTO;
-import com.tindev.apicontato.dto.ContatoDTO;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.tindev.apicontato.dto.contato.ContatoCreateDTO;
+import com.tindev.apicontato.dto.contato.ContatoDTO;
 import com.tindev.apicontato.service.ContatoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class ContatoController {
     }
 
     @GetMapping("/listar")
-    public List<ContatoDTO> listContato() {
+    public List<ContatoDTO> listContato() throws JsonProcessingException {
         return contatoService.list();
     }
 }
